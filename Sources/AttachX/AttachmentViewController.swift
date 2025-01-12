@@ -2,6 +2,7 @@ import UIKit
 import PhotosUI
 import MobileCoreServices
 
+
 // MARK: - Protocol
 public protocol AttachmentViewControllerDelegate: AnyObject {
     func didSelectAttachmentOption(_ option: AttachmentOption, fileType: String?, fileData: Data?, fileURL: URL?)
@@ -89,4 +90,8 @@ public class AttachmentViewController: UIViewController {
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK action"), style: .default))
         present(alert, animated: true)
     }
+}
+
+#Preview {
+    AttachmentViewController(nibName: nil, bundle: nil)
 }
